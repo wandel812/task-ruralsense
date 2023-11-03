@@ -15,7 +15,7 @@ type User = {
 
 
 const fetchUserData = () => {
-    new Promise(resolve => {
+    return new Promise(resolve => {
         setTimeout(() => resolve(generateUserData()), 1000);
     })
 }
@@ -85,11 +85,12 @@ function generateUserData(): User[] {
             isActivated: true,
             role: UserRole.ADMIN
         },
-        
+
 
     ])
 }
 
-export {UserRole, fetchUserData};
+export { UserRole, fetchUserData };
+export type { User };
 
 
